@@ -30,5 +30,17 @@ export default {
     fadeOut: 2,
     gain: 0,
     spatialized: false,
-  }, ],
+  }, {
+    id: 'sparkasse',
+    name: 'Sparkasse',
+    latitude: 48.053296,
+    longitude: 8.205071,
+    audio: 'sounds/bass.mp3',
+    innerRadius: 10,
+    outerRadius: 20,
+    fadeIn: 0.2,
+    fadeOut: 2,
+    gain: 0,
+    spatialized: false,
+  },],
 };
