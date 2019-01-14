@@ -321,14 +321,18 @@ class LoopPlayer {
       const currentGainValue = this._getCurrentFadeValue(time);
       this._startFade(time, currentGainValue, fadeEndTime, fadeTarget);
     } else {
+      const buffer = setup.audio;
+      const duration = buffer.duration;
+      const position = time % duration;
+
       const gainNode = audioContext.createGain();
       gainNode.connect(audioContext.destination);
       gainNode.gain.value = 0;
 
       const sourceNode = audioContext.createBufferSource();
       sourceNode.connect(gainNode);
-      sourceNode.buffer = setup.audio;
-      sourceNode.start(time);
+      sourceNode.buffer = buffer;
+      sourceNode.start(time, position);
       sourceNode.loop = true;
 
       this.sourceNode = sourceNode;
@@ -420,6 +424,7 @@ class PlayerExperience extends soundworks.Experience {
       files: setup,
     });
 
+    // PROD!!!
     // this.geolocation = this.require('geolocation', {
     //   state: 'start',
     //   enableHighAccuracy: true,
@@ -460,12 +465,12 @@ class PlayerExperience extends soundworks.Experience {
     this.view = new MapView(area, listener, points);
 
     this.show().then(() => {
-      // this.geolocation.addListener('geoposition', this.onGeoposition);
+      // this.geolocation.addListener('geoposition', this.onGeoposition); // PROD!!!
       window.addEventListener('deviceorientation', this.onOrientation, false);
 
-      // const coords = client.geoposition.coords;
-      // this.setListenerPosition(coords.latitude, coords.longitude, 10);
-      this.setListenerPosition(48.053135, 8.2050165, 10);
+      // const coords = client.geoposition.coords; // PROD!!!
+      // this.setListenerPosition(coords.latitude, coords.longitude, 10); // PROD!!!
+      this.setListenerPosition(48.053135, 8.2050165, 10); // DEV!!!
 
       const surface = new soundworks.TouchSurface(this.view.$el, { normalizeCoordinates: false });
       surface.addListener('touchstart', this.onTouchStart);
