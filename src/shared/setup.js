@@ -1,4 +1,11 @@
 export default {
+  map: {
+    'top-right-latitude': 48.049885,
+    'top-right-longitude': 8.210522,
+    'botton-left-latitude': 48.049885,
+    'botton-left-longitude': 8.210522,
+    image: 'images/map.png',
+  },
   points: [{
     id: 'Punkt 1',
     name: 'Kuli und Blei',
