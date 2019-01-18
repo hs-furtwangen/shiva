@@ -147,10 +147,12 @@ class PointElement {
     const center = document.createElement('img');
     const innerCircle = document.createElement('div');
     const outerCircle = document.createElement('div');
+    //const rotate = 360 * Math.random();
 
     anker.id = id;
     anker.classList.add('point');
     center.src = "images/point.png";
+    //center.style.transform = `rotate(${rotate}deg)`;
     center.classList.add('center');
     innerCircle.classList.add('innner-circle');
     outerCircle.classList.add('outer-circle');

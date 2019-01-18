@@ -599,7 +599,7 @@ const serviceViews = {
       this.template = `
         <div class="section-top"></div>
         <div class="section-center flex-center">
-          <img id="welcome" src="../images/welcome.jpg" width="375px" height="375px">
+          <img id="welcome" src="../images/welcome.jpg">
         </div>
         <div class="section-bottom"></div>
       `;
