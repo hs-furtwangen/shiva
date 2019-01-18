@@ -100,23 +100,21 @@ class ListenerElement {
   constructor(map) {
     const container = map.$el;
     const anker = document.createElement('div');
-    const center = document.createElement('div');
-    const nose = document.createElement('div');
+    const center = document.createElement('img');
     const circle = document.createElement('div');
+
+    center.src = "images/listener.png";
 
     anker.classList.add('listener');
     center.classList.add('center');
-    nose.classList.add('nose');
     circle.classList.add('circle');
 
     anker.appendChild(center);
-    anker.appendChild(nose);
     anker.appendChild(circle);
     container.appendChild(anker);
 
     this.anker = anker;
     this.center = center;
-    this.nose = nose;
     this.circle = circle;
     this.map = map;
   }
@@ -146,12 +144,13 @@ class PointElement {
   constructor(map, id) {
     const container = map.$el;
     const anker = document.createElement('div');
-    const center = document.createElement('div');
+    const center = document.createElement('img');
     const innerCircle = document.createElement('div');
     const outerCircle = document.createElement('div');
 
     anker.id = id;
     anker.classList.add('point');
+    center.src = "images/point.png";
     center.classList.add('center');
     innerCircle.classList.add('innner-circle');
     outerCircle.classList.add('outer-circle');
@@ -194,19 +193,15 @@ class PointElement {
   }
 
   setState(isActive, duration = 0) {
-    const center = this.center;
     const innerCircle = this.innerCircle;
     const outerCircle = this.outerCircle;
 
-    center.style.transitionDuration = `${duration}s`;
     innerCircle.style.transitionDuration = `${duration}s`;
 
     if (isActive) {
-      center.classList.add('active');
       innerCircle.classList.add('active');
       outerCircle.classList.add('active');
     } else {
-      center.classList.remove('active');
       innerCircle.classList.remove('active');
       outerCircle.classList.remove('active');
     }
