@@ -597,46 +597,19 @@ const serviceViews = {
       super();
 
       this.template = `
-        <% if (isCompatible === false) { %>
-          <div class="section-top"></div>
-          <div class="section-center flex-center">
-            <p><%= errorCompatibleMessage %></p>
-          </div>
-          <div class="section-bottom"></div>
-        <% } else if (hasAuthorizations === false) { %>
-          <div class="section-top"></div>
-          <div class="section-center flex-center">
-            <p><%= errorHooksMessage %></p>
-          </div>
-          <div class="section-bottom"></div>
-        <% } else { %>
-          <div class="section-top flex-middle"></div>
-          <div class="section-center flex-center">
-              <p class="big">
-                <%= intro %>
-                <br />
-                <b><%= globals.appName %></b>
-              </p>
-          </div>
-          <div class="section-bottom flex-middle">
-            <% if (checking === true) { %>
-            <p class="small soft-blink"><%= checkingMessage %></p>
-            <% } else if (hasAuthorizations === true) { %>
-            <p class="small soft-blink"><%= instructions %></p>
-            <% } %>
-          </div>
-        <% } %>
+        <div class="section-top"></div>
+        <div class="section-center flex-center">
+          <img id="welcome" src="../images/welcome.jpg" width="375px" height="375px">
+        </div>
+        <div class="section-bottom"></div>
       `;
 
-      this.model = {
-        isCompatible: null,
-        hasAuthorizations: null,
-        checking: false,
-        intro: 'Welcome to',
-        instructions: 'Touch the screen to join!',
-        checkingMessage: 'Please wait while checking compatiblity',
-        errorCompatibleMessage: 'Sorry,<br />Your device is not compatible with the application.',
-        errorHooksMessage: `Sorry,<br />The application didn't obtain the necessary authorizations.`,
+      this.model = { };
+
+      this.ratios = {
+        '.section-top': 0,
+        '.section-center': 1,
+        '.section-bottom': 0,
       };
 
       this._touchstartCallback = noop;
