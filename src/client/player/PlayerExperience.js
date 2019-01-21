@@ -422,13 +422,13 @@ class PlayerExperience extends soundworks.Experience {
     });
 
     // PROD!!!
-    // this.geolocation = this.require('geolocation', {
-    //   state: 'start',
-    //   enableHighAccuracy: true,
-    //   debug: false,
-    //   // timeout: 1000,
-    //   // maximumAge: 120000,
-    // });
+    this.geolocation = this.require('geolocation', {
+      state: 'start',
+      enableHighAccuracy: true,
+      debug: false,
+      // timeout: 1000,
+      // maximumAge: 120000,
+    });
 
     this.listener = null;
     this.points = null;
@@ -462,12 +462,12 @@ class PlayerExperience extends soundworks.Experience {
     this.view = new MapView(area, listener, points);
 
     this.show().then(() => {
-      // this.geolocation.addListener('geoposition', this.onGeoposition); // PROD!!!
+      this.geolocation.addListener('geoposition', this.onGeoposition); // PROD!!!
       window.addEventListener('deviceorientation', this.onOrientation, false);
 
-      // const coords = client.geoposition.coords; // PROD!!!
-      // this.setListenerPosition(coords.latitude, coords.longitude, 10); // PROD!!!
-      this.setListenerPosition(48.053135, 8.2050165, 10); // DEV!!!
+      const coords = client.geoposition.coords; // PROD!!!
+      this.setListenerPosition(coords.latitude, coords.longitude, 10); // PROD!!!
+      //this.setListenerPosition(48.053135, 8.2050165, 10); // DEV!!!
 
       const surface = new soundworks.TouchSurface(this.view.$el, { normalizeCoordinates: false });
       surface.addListener('touchstart', this.onTouchStart);
