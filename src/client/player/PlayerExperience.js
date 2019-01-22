@@ -147,12 +147,10 @@ class PointElement {
     const center = document.createElement('img');
     const innerCircle = document.createElement('div');
     const outerCircle = document.createElement('div');
-    //const rotate = 360 * Math.random();
 
     anker.id = id;
     anker.classList.add('point');
     center.src = "images/point.png";
-    //center.style.transform = `rotate(${rotate}deg)`;
     center.classList.add('center');
     innerCircle.classList.add('innner-circle');
     outerCircle.classList.add('outer-circle');
@@ -226,7 +224,7 @@ class MapView extends soundworks.View {
     this.listener.element = new ListenerElement(this);
 
     for (let point of this.points)
-      point.element = new PointElement(this, point.id);
+      point.element = new PointElement(this, point.setup.id);
   }
 
   onResize(viewportWidth, viewportHeight, orientation) {
@@ -469,6 +467,7 @@ class PlayerExperience extends soundworks.Experience {
       this.setListenerPosition(coords.latitude, coords.longitude, 10); // PROD!!!
       //this.setListenerPosition(48.053135, 8.2050165, 10); // DEV!!!
 
+      // DEV!!!
       const surface = new soundworks.TouchSurface(this.view.$el, { normalizeCoordinates: false });
       surface.addListener('touchstart', this.onTouchStart);
       surface.addListener('touchmove', this.onTouchMove);
