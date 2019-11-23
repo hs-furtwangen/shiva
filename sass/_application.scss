@@ -43,6 +43,98 @@
   height: 100%;
   background-color: black;
 
+  #point-1 {
+    transform: rotate(190deg);
+
+    img {
+      position: absolute;
+      top: -2px;
+    }
+  }
+
+  #point-2 {
+    transform: rotate(265deg);
+
+    img {
+      position: absolute;
+      top: -1px;
+    }
+  }
+
+  #point-3 {
+    transform: rotate(265deg);
+
+    img {
+      position: absolute;
+      top: -1px;
+    }
+  }
+
+  #point-4 {
+    transform: rotate(245deg);
+
+    img {
+      position: absolute;
+      top: -1px;
+    }
+  }
+
+  #point-5 {
+    transform: rotate(0deg);
+
+    img {
+      position: absolute;
+      top: 0px;
+    }
+  }
+
+  #point-6 {
+    transform: rotate(60deg);
+
+    img {
+      position: absolute;
+      top: -1px;
+    }
+  }
+
+  #point-7 {
+    transform: rotate(180deg);
+
+    img {
+      position: absolute;
+      top: -5px;
+      left: -0.3px;
+    }
+  }
+
+  #point-8 {
+    transform: rotate(0deg);
+
+    img {
+      position: absolute;
+      top: -1px;
+    }
+  }
+
+  #point-9 {
+    transform: rotate(0deg);
+
+    img {
+      position: absolute;
+      top: -1px;
+    }
+  }
+
+  #point-10 {
+    transform: rotate(0deg);
+
+    img {
+      position: absolute;
+      top: -1px;
+    }
+  }
+
+
   .point {
     position: absolute;
     width: 0;
