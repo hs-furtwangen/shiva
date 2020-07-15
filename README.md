@@ -1,4 +1,4 @@
-# GemMus – 2018
+# Shiva
 
 To install the application (requires `node.js` and optionally `git`):
 * check out the repository using `git` or download and unzip the code
@@ -11,4 +11,3 @@ To run the application:
 * to start the `controller` client, open the URL `localhost:8000/controller` in your browser
 
 To run the `player` client on your mobile device you have to connect to the same network as the server and open `<server address>:8000` in a browser on the mobile device.
-# shiva
