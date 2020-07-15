@@ -1,8 +1,9 @@
 # Shiva
+Shiva is a geolocalized mobile audio application created by Daniel Leguy and NOrbert Schnell in the framework of the seminar *Interactive SOund and Music*.
 
 To install the application (requires `node.js` and optionally `git`):
 * check out the repository using `git` or download and unzip the code
-* open a shell/terminal and change the current directory to the downloaded (unzipped) `GemMus-2018` project directory
+* open a shell/terminal and change the current directory to the downloaded (unzipped) `shiva` project directory
 * run `npm install`
 
 To run the application:
