@@ -1,5 +1,5 @@
 # Shiva
-Shiva is a geolocalized mobile audio application created by Daniel Leguy and Norbert Schnell in the framework of the seminar *Interactive SOund and Music*.
+Shiva is a geolocalized mobile audio application created by Daniel Leguy and Norbert Schnell in the framework of the seminar *Interactive Sound and Music*.
 
 To install the application (requires `node.js` and optionally `git`):
 * check out the repository using `git` or download and unzip the code
